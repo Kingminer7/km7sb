@@ -1,4 +1,8 @@
+require("dotenv").config();
 const disc = require('discord.js-selfbot-v13');
+const express = require('express');
+const app = express();
+app.listen(3000)
 const client = new disc.Client(
     { checkUpdate: false }
 );
@@ -40,3 +44,5 @@ client2.on('messageCreate', async (message) => {
 });
 
 client2.login(process.env.t2);
+
+console.log("runnin")
